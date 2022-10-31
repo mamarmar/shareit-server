@@ -78,6 +78,7 @@ export const login = async (req, res) => {
     //Validate user input
     if (!(email && password)) {
       res.status(400).send("All input is required");
+      return;
     }
     //Validate if user exists in database
     const user = await userModel.findOne({ email });
