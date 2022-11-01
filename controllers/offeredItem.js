@@ -16,7 +16,7 @@ export const getOfferedItems = async (req, res) => {
 export const getOfferedItemsBySearch = async (req, res) => {
   try {
     const filtersArr = [];
-    for (const filterKey of ["name", "city", "category"]) {
+    for (const filterKey of ["itemName", "city", "category"]) {
       if (req.query[filterKey]) {
         const thisFilter = {};
         thisFilter[filterKey] = req.query[filterKey];
